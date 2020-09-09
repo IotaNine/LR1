@@ -19,32 +19,32 @@ int main()
     std::cout << "A=" << A << std::endl;
 
     bool k, l, m, n, D;
-    std::cout << "Enter k value: ";
+    std::cout << "Введите k: ";
     std::cin >> k;
-    std::cout << "Enter l value: ";
+    std::cout << "Введите l: ";
     std::cin >> l;
-    std::cout << "Enter m value: ";
+    std::cout << "Введите m: ";
     std::cin >> m;
-    std::cout << "Enter n value: ";
+    std::cout << "Введите n: ";
     std::cin >> n;
     D = (m ^ k) && (!l) || n;
     std::cout << std::boolalpha << "D=" << D << std::endl;
 
     int b, B;
-    std::cout << "Enter b value: ";
+    std::cout << "Введите b: ";
     std::cin >> b;
     B = pow(2, b);
     std::cout << "B=" << B << std::endl;
     std::cout << "B(восьмеричная)=" << std::oct << B << std::endl;
 
     unsigned short int c, d, e, f, F;
-    std::cout << "Enter c value: ";
+    std::cout << "Введите  c: ";
     std::cin >> c;
-    std::cout << "Enter d value: ";
+    std::cout << "Введите d: ";
     std::cin >> d;
-    std::cout << "Enter e value: ";
+    std::cout << "Введите e: ";
     std::cin >> e;
-    std::cout << "Enter f value: ";
+    std::cout << "Введите f: ";
     std::cin >> f;
     F = (c || d) && (!e) ^ f;
     std::cout << std::hex << std::showbase << F << std::endl;
