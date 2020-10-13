@@ -9,48 +9,46 @@ int main()
     int x, X;
     std::cout << "Введите x: ";
     std::cin >> x;
-    X = (x * x) + x - 4;
-    std::cout << "X=" << X << std::endl;
+    X = pow(x, 2) + x - 4;
+    std::cout << "X=" << std::setprecision(3) << X << std::endl;
 
-    unsigned int a, A;
+    unsigned int a;
+    float A;
     std::cout << "Введите a: ";
     std::cin >> a;
-    A = (2 * a) - sqrt(a + 1);
-    std::cout << "A=" << A << std::endl;
+    A = 2 * abs(a) - sqrt(a + 1);
+    std::cout << "A=" << std::showpos << A << std::endl;
 
     bool k, l, m, n, D;
-    std::cout << "Введите k: ";
+    std::cout << "Enter k value: ";
     std::cin >> k;
-    std::cout << "Введите l: ";
+    std::cout << "Enter l value: ";
     std::cin >> l;
-    std::cout << "Введите m: ";
+    std::cout << "Enter m value: ";
     std::cin >> m;
-    std::cout << "Введите n: ";
+    std::cout << "Enter n value: ";
     std::cin >> n;
-    D = (m ^ k) && (!l) || n;
+    D = (m xor k) && (!l) || n;
     std::cout << std::boolalpha << "D=" << D << std::endl;
 
     int b, B;
-    std::cout << "Введите b: ";
+    std::cout << "Enter b value: ";
     std::cin >> b;
     B = pow(2, b);
     std::cout << "B=" << B << std::endl;
     std::cout << "B(восьмеричная)=" << std::oct << B << std::endl;
 
     unsigned short int c, d, e, f, F;
-    std::cout << "Введите  c: ";
+    std::cout << "Enter c value: ";
     std::cin >> c;
-    std::cout << "Введите d: ";
+    std::cout << "Enter d value: ";
     std::cin >> d;
-    std::cout << "Введите e: ";
+    std::cout << "Enter e value: ";
     std::cin >> e;
-    std::cout << "Введите f: ";
+    std::cout << "Enter f value: ";
     std::cin >> f;
-    F = (c || d) && (!e) ^ f;
-    std::cout << std::hex << std::showbase << F << std::endl;
-    std::cout << std::setw(4) << std::left << std::setfill('0');
-    std::cout << F << std::endl;
-    std::cout << std::setw(4) << std::internal << F << std::endl;
-    std::cout << std::dec << std::setw(4) << std::right;
-    std::cout << a << std::endl;
+    F = (c | d) & (~e) ^ f;
+    std::cout << std::setw(6) <<
+              std::setfill('0') << std::internal <<
+              std::hex << std::showbase << ((c | d) & (~e) ^ f);
 }
